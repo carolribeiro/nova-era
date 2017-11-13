@@ -1,0 +1,380 @@
+// COMPONENTS
+@import '_components';
+
+
+// CONTENT
+.ultimas{
+	padding:5px 0 50px 0;
+	@extend .clearfix;
+	.title{
+		text-transform:uppercase;
+		letter-spacing:2px;
+		margin-bottom:25px;
+		color:$color-1;
+	}
+	.block-ultimas{
+		width:55%;
+		float:left;
+		padding:25px;
+		position:relative;
+		border-radius:0 40px 40px 40px;
+		border:1px solid $color-1;
+		color:$text-color;
+	}
+	.swiper-content{
+		width:80%;
+	}
+	.titulo-noticia, .chamada-noticia{
+		font-size:18px;
+		@extend .clearfix;
+	}
+	.titulo-noticia{
+		text-transform:uppercase;
+	}
+	.chamada-noticia{
+		margin-bottom:25px;
+	}
+	.swiper-buttons{
+		width:80px;
+		height:80px;
+		position: absolute;
+		right:-1px;
+		top:-1px;
+		border-radius:0 50% 0 50%;
+		background:$color-1;
+		.swiper-button{
+			background:initial;
+			color:lighten( $color-1 , 25% );
+			font-size:95px;
+			line-height:30px;
+			font-weight: 100;
+		}
+	}
+	.veja-mais{
+		display:block;
+		padding:10px 15px;
+		background:$color-1;
+		color:#FFF;
+		text-transform:uppercase;
+		text-decoration:none;
+		float:left;
+		max-width: 150px;
+		text-align:center;
+		transition:.2s linear;
+		&:before{
+			content:'\203A';
+			color:#FFF;
+			margin-right:5px;
+		}
+		&:hover{
+			background:lighten( $color-1 , 5% );
+		}
+	}
+	.block-horario{
+		float:right;
+		position:relative;
+		width:35%;
+		padding:25px;
+		border:1px solid $color-1;
+		border-radius: 0 40px 40px 40px;
+		.horario{
+			//text-transform:uppercase;
+			color:$text-color;
+		}
+		.fa{
+			width: 80px;
+			height: 80px;
+			border-radius:0 50% 0 50%;
+			position: absolute;
+			background:$color-1;
+			color:lighten( $color-1 , 25% );
+			right:-1px;
+			top:-1px;
+			line-height:80px;
+			text-align:center;
+			font-size:65px;
+		}
+	}
+}
+
+.venha{
+	padding:20px 0;
+	background: url(../images/bn-3.jpg) no-repeat center center;
+	background-size:cover;
+	background-attachment:fixed;
+	.box{
+		padding:20px;
+		box-shadow:0 0 0 1px $color-1;
+		color:$color-1;
+		font-weight: 100;
+		background-color:rgba(255,255,255,0.7)
+		;		text-align:center;
+		text-transform:uppercase;
+		font-size:45px;
+	}
+}
+
+.noticias-list{
+	padding:50px 0;
+	list-style:none;
+	width: 100%;
+	.li{
+		position:relative;
+		width:100%;
+		display: block;
+		margin-bottom:30px;
+		padding-left:15px;
+		transition:.2s ease-in-out;
+		&:before{
+			position:absolute;
+			left:0;
+			top:0;
+			height:100%;
+			width:2px;
+			background:$color-1;
+			content:'';
+			transition:.2s ease-in-out;
+		}
+		&:hover{
+			padding-left:25px;
+			&:before{
+				width:5px;
+			}
+		}
+	}
+	.titulo{
+		font-weight: 100;
+		color:$color-1;
+		display:block;
+		font-size:25px;
+		text-transform:uppercase;
+		text-decoration:none;
+	}
+	.chamada{
+		font-style:italic;
+		color:$text-color;
+		font-size:20px;
+	}
+	.veja-integra{
+		text-transform:uppercase;
+		padding:15px;
+		display: block;
+		text-decoration: none;
+		text-align:center;
+		max-width:300px;
+		font-size:20px;
+		background:$color-1;
+		color:#FFF;
+		transition:.2s ease-in-out;
+		&:hover{
+			background:lighten( $color-1 , 5% );
+		}
+		&.doc{
+			max-width:150px;
+			.fa{
+				float:left;
+			}
+		}
+	}
+}
+
+.paginacao-list{
+	list-style:none;
+	width: 100%;
+	text-align:center;
+	.li{
+		display:inline-block;
+		&.active{
+			.link{
+				color:#FFF;
+				background:$color-1;
+			}
+		}
+	}
+	.link{
+		display:block;
+		padding:15px;
+		color:$color-1;
+		box-shadow:0 0 0 1px;
+		text-decoration:none;
+		font-size:20px;
+		transition:.2s ease-in-out;
+		&:hover{
+			color:#FFF;
+			background:$color-1;
+		}
+	}
+}
+
+.noticias-interna{
+	.title{
+		font-size:30px;
+		color:$color-1;
+		font-weight: 100;
+		text-transform:uppercase;
+		margin-bottom:35px;
+	}
+	.figure{
+		margin-bottom:35px;
+		.img{
+			transition:.2s ease-in-out;
+			&:hover{
+				filter:sepia(0.2);
+				-webkit-filter:sepia(0.2);
+			}
+		}
+	}
+	.conteudo-noticia{	
+		width: 65%;
+		float:left;
+		.text{
+			text-align:justify;
+		}
+		.title{
+			margin-bottom:0;
+			font-size:35px;
+		}
+		.subtitle{
+			font-style:italic;
+			color:$text-color;
+			font-size:20px;
+			display: block;
+			margin-bottom:35px;
+		}
+		.fonte{
+			font-weight:100;
+			font-size:18px;
+			font-style:italic;
+			.link-fonte{
+				@extend .link-padrao;
+				color:$color-1;
+			}
+		}
+	}
+	.aside-noticia{
+		padding:5px 5px 5px 55px;
+		border-left:1px solid $color-1;
+		width:29%;
+		float:right;
+		.titulo-link{
+			text-decoration:none !important;;
+		}
+	}
+}
+
+.contato{
+
+	.form{
+		@extend .clearfix;
+		.fieldset{
+			display:block;
+			border:0;
+			&.fd-50{
+				width:49%;
+				&:first-of-type{
+					float:left;
+				}
+				&:last-of-type{
+					float:right;
+				}
+			}
+			&.fd-100{
+				width:100%;
+			}
+		}
+		.linha{
+			@extend .clearfix;
+			margin-bottom:10px;
+		}
+		.input{
+			width:100%;
+			box-shadow:0 0 0 1px $color-1;
+			padding:10px;
+			border:0;
+			color:$color-1;
+			background:#FFF;
+			font-size:20px;
+			resize:none;
+		}
+		.btn-enviar{
+			border:0;
+			color:#FFF;
+			background:$color-1;
+			padding:10px 20px;
+			font-size:20px;
+			text-transform:uppercase;
+			cursor:pointer;
+			float:left;
+		}
+	}
+	.box-form{
+		width:60%;
+		float:left;
+	}
+	.box-address{
+		float:right;
+		width:35%;
+	}
+	.iframe-mapa{
+		width:100%;
+		min-height:200px;
+	}
+	.address{
+		color:$text-color;
+		margin-bottom:10px;
+		&.tel{
+			font-size:20px;
+			color:$color-1;
+		}
+	}
+}
+
+.block-membros{
+	@extend .clearfix;
+	.membros-list{
+		@extend .clearfix;
+		width:100%;
+		.li{
+			width:24%;
+			padding:25px;
+			margin-right:1%;
+			box-shadow:0 0 0 1px $color-1;
+			min-height:420px;
+			float:left;
+			background:lighten( $color-1 , 50% );
+			&:nth-child(4n){
+				float:right;
+				margin-right:0;
+			}
+		}
+		.figure{
+			overflow:hidden;
+			box-shadow:0 0 0 1px $color-1;
+			width: auto;
+			width: 200px !important;
+			height: 200px;
+			margin:0 auto 15px auto;
+			position: relative;
+		}
+		.img{
+			position:absolute;
+			left:0;
+			top: 0;
+			transition:.2s ease-in-out;
+			&:hover{
+				transform:scale(1.1) rotate(-2deg);
+			}
+		}
+		.nome , .desc{
+			text-align:center;
+			display: block;
+			width: 100%;
+			font-size:20px;
+			color:$color-1;
+			margin-bottom:15px;
+		}
+		.nome{
+			font-weight:400;
+		}
+	}
+}

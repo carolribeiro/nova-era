@@ -1,0 +1,80 @@
+// FONTS IMPORT
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400italic,700,700italic,300italic,300);
+@import url(https://fonts.googleapis.com/css?family=Tangerine:400,700);
+// RESET
+* {
+	margin:0;
+	padding:0;
+	list-style:none;
+	box-sizing:border-box;
+	vertical-align:baseline;
+	font-family: "Roboto Condensed", Arial;
+}
+
+// VARIABLES
+$color-1:#a24d86;
+$text-color:#585858;
+$wrapper:1174px;
+
+// CLASSES
+.wrapper{
+	width:95%;
+	max-width:$wrapper;
+	display:block;
+	margin:0 auto;
+}
+.text{
+	margin-bottom: 30px;
+	color:$text-color;
+}
+.figure{
+	max-width:100%;
+	text-align:center;
+	.img{
+		max-width: 100%;
+	}
+}
+.no-bullet{
+	list-style:none;
+}
+.text{
+	font-size:18px;
+	color:$text-color;
+}
+.clearfix{
+	&:after{
+		content:'';
+		clear: both;
+		height: 0;
+		display:block;
+	}
+}
+.clear{
+	clear: both;
+	@extend .clearfix;
+}
+.spaceblock{
+	color:10px
+}
+.link-padrao{
+	font-size:inherit;
+	text-decoration:none;
+	position:relative;
+	color:$color-1;
+	transition:.2s ease-in-out;
+	&:after{
+		position:absolute;
+		content:"";
+		background:$color-1;
+		bottom:1%;
+		right: 0;
+		height: 7%;
+		width: 0;
+		transition:.2s ease-in-out;
+	}
+	&:hover{
+		&:after{
+			width: 100%;
+		}
+	}
+}
