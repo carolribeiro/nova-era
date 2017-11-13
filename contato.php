@@ -2,7 +2,7 @@
 <html>
 <head>
 	<?php include 'includes/partial-head.php';?>
-	<title>Projeto Nova Era</title>	
+	<title>Projeto Nova Era</title>
 </head>
 <body class="body">
 	<?php include 'includes/header.php';?>

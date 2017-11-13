@@ -1,17 +1,8 @@
-<?php 
-require_once $_SERVER['DOCUMENT_ROOT']."/config/classes/banco.php";
-
-$banco = new Banco();
-$SQL = "SELECT * FROM tb_noticias ORDER BY id_noticia DESC LIMIT 10;";
-$banco->preparaSQL( $SQL );
-$consulta = $banco->executaSQL();
-$consulta = $consulta->fetchAll();
-?>
 <!DOCTYPE html>
 <html>
 <head>
 	<?php include 'includes/partial-head.php';?>
-	<title>Projeto Nova Era</title>	
+	<title>Projeto Nova Era</title>
 </head>
 <body class="body">
 	<?php include 'includes/header.php';?>
@@ -19,13 +10,11 @@ $consulta = $consulta->fetchAll();
 		<div class="wrapper">
 		<h2 class="title-geral">notícias</h2>
 			<ul class="noticias-list">
-				<?php foreach ( $consulta as $campo ) : ?>
 				<li class="li" data-anchor="elemento">
-					<span class="titulo"><?=utf8_encode( $campo['ds_titulo'] )?></span>
-					<p class="chamada"><?=utf8_encode( $campo['ds_subtitulo'] )?></p>
-					<a href="noticias-integra.php?noticia=<?=$campo['id_noticia']?>" class="veja-integra">ver notícia completa</a>
+					<span class="titulo"></span>
+					<p class="chamada"></p>
+					<a href="" class="veja-integra">ver notícia completa</a>
 				</li>
-				<?php endforeach;?>
 			</ul>
 			<ul class="paginacao-list">
 				<!--<li class="li"><a href="#" class="link">&lsaquo;</a></li>-->
